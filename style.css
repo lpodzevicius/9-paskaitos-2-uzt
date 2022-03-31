@@ -1,0 +1,54 @@
+body {
+    background: black;
+    color: white;
+    text-align: center;
+}
+h2 {
+    font-family: arial;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: color 0.3s;
+}
+h2:hover {
+    transition-delay: 0.1s;
+    color: red;
+}
+
+h2::before {
+    position: absolute;
+   
+    top: 75%;
+    left: 43%;
+    width: 2%;
+    height: 89%;
+    content: "";
+    color: red;
+    background: black;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+h2:hover::before {
+    background: red;
+    transform: rotate(90deg) translate(-50px, -50px) scale(2);
+    opacity: 1;
+}
+h2::after {
+    position: absolute;
+    top: 68%;
+    width: 2%;
+    height: 15%;
+    content: "";
+    color: white;
+    background: red;
+    
+    opacity: 0;
+    transition: 0.3s;
+}
+
+h2:hover::after {
+      transition-delay: 0.1s; 
+    
+}
